@@ -1,3 +1,10 @@
+
+const dotenv = require(`dotenv`)
+
+if (process.env.NODE_ENV !== `production`){
+  dotenv.config()
+}
+
 module.exports = {
   siteMetadata: {
     title: "pranavt",
@@ -6,8 +13,9 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: {
-        accessToken: "",
-        spaceId: "",
+        spaceId: "yzdi2v6tltpw", 
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN, 
+        environment:'master',
       },
     },
     "gatsby-plugin-sass",
@@ -16,7 +24,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/icon.svg",
       },
     },
     "gatsby-plugin-mdx",
@@ -38,5 +46,14 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /images/, 
+        }
+      }
+    },
+    
   ],
 };

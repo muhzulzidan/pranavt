@@ -1,0 +1,19 @@
+
+@import "./reset/index.scss";
+@import "./variable/color";
+@import "./header/header";
+@import "./footer/footer";
+
+
+// pages
+
+@import "./page";
+@import "./page/getTokens";
+
+html{
+    font-family: "Poppins", sans-serif;
+    line-height: normal;
+    p{
+        line-height: normal;
+    }
+}
