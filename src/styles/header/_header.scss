@@ -2,4 +2,39 @@
     padding: 1em;
     background-color: $purple-color;
     color: white;
+    a{
+        text-decoration: none;
+    }
+    a.logo{
+        svg{
+            width: 8em;
+            height: 5em;
+        }
+    }
+
+    .content{
+        display: none;
+    }
+}
+@media screen and (min-width: 900px) {
+    .header{
+        display: flex;
+        justify-content: space-between;
+        a.logo{
+            padding-left: 8em;
+            svg{
+                width: 8em;
+                height: 5em;
+            }
+        }
+        .content{
+            align-items: center;
+            padding-right: 5em;
+            a{
+                color: white;
+                padding-right : 3em;
+            }
+            display: flex;
+        }
+    }
 }

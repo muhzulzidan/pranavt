@@ -10,7 +10,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Twitter from "../images/sosmed/twitter.svg"
 import Discord from "../images/sosmed/discord.svg"
 import Telegram from "../images/sosmed/telegram.svg"
-import Logo from "../images/icon.svg"
+import Logo from "../images/logo.svg"
 
 const Bold = ({ children }) => <span className="bold">{children}</span>
 const Text = ({ children }) => <p className="p">{children}</p>
@@ -52,6 +52,7 @@ const Footer = () => {
                     <Logo className="logo"/>
                     <div className="content">{data.contentfulFooter.content && renderRichText(data.contentfulFooter.content, options)}</div>
                     <div className="sosmed">
+                        <p>Contact & Follow</p>
                         <Twitter  />
                         <Telegram  />
                         <Discord  />
