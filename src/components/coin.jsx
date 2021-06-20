@@ -6,53 +6,53 @@ class Coin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      result: "",
+      result: "coin5",
     };
-    this.coinToss = this.coinToss.bind(this)
+    // this.coinToss = this.coinToss.bind(this)
     
   }
 
-  coinToss() {
-    setTimeout(()=>{ 
-      this.setState({ result: "coin1" });
+//   coinToss() {
+//     setTimeout(()=>{ 
+//       this.setState({ result: "coin1" });
 
-      setTimeout(()=>{ 
-        this.setState({ result: "coin2" });
+//       setTimeout(()=>{ 
+//         this.setState({ result: "coin2" });
 
-          setTimeout(()=>{ 
-            this.setState({ result: "coin3" });
+//           setTimeout(()=>{ 
+//             this.setState({ result: "coin3" });
 
-              setTimeout(()=>{ 
-                this.setState({ result: "coin4" });
+//               setTimeout(()=>{ 
+//                 this.setState({ result: "coin4" });
 
-                  setTimeout(()=>{ 
-                    this.setState({ result: "coin5" });
-                  },3000);
+//                   setTimeout(()=>{ 
+//                     this.setState({ result: "coin5" });
+//                   },5000);
 
-              },3000);
-
-
-          },3000);
-
-      },3000);
-
-  },3000);
-}
+//               },5000);
 
 
-  componentDidMount() {
-    // Call this function so that it fetch first time right after mounting the component
-    this.coinToss();
+//           },5000);
 
-    // set Interval
-    this.interval = setInterval(this.coinToss, 12000);     
+//       },5000);
 
-}
+//   },5000);
+// }
 
-componentWillUnmount() {
-    // Clear the interval right before component unmount
-    clearInterval(this.interval);
-}
+
+//   componentDidMount() {
+//     // Call this function so that it fetch first time right after mounting the component
+//     this.coinToss();
+
+//     // set Interval
+//     this.interval = setInterval(this.coinToss, 15000);     
+
+// }
+
+// componentWillUnmount() {
+//     // Clear the interval right before component unmount
+//     clearInterval(this.interval);
+// }
 
  
 
@@ -67,24 +67,20 @@ componentWillUnmount() {
         <div className="Coin">
           <div id="coin" className={this.state.result} key={+new Date()}>
           {/* <div id="coin" className={`coin1`} key={+new Date()}> */}
-            <div className="side-a">
+            {/* <div className="side-a">
               <GatsbyImage image={getImage(data.img)} alt="token" className="img"/>
             </div>
             <div className="side-b">
               <img src={data.manyImg[0].file.url} className="img"/>
-              {/* <GatsbyImage image={getImage(data.manyImg[0])} alt="token" className="img"/> */}
             </div>
             <div className="side-c">
               <img src={data.manyImg[1].file.url} className="img"/>
-              {/* <GatsbyImage image={getImage(data.manyImg[1])} alt="token" className="img"/> */}
             </div>
             <div className="side-d">
               <img src={data.manyImg[2].file.url} className="img"/>
-              {/* <GatsbyImage image={getImage(data.manyImg[2])} alt="token" className="img"/> */}
-            </div>
+            </div> */}
             <div className="side-e">
               <img src={data.manyImg[3].file.url} className="img"/>
-              {/* <GatsbyImage image={getImage(data.manyImg[3])} alt="token" className="img"/> */}
             </div>
           </div>
         </div>
